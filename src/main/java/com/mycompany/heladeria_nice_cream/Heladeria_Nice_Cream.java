@@ -12,73 +12,71 @@ import java.util.Scanner;
  */
 public class Heladeria_Nice_Cream {
 
-    private static Barquilla bar;
 
     public static void main(String[] args) {
         
         Scanner leer = new Scanner(System.in);
         String h = "", t = "";
-        int l = 0;
+        int op = 0;
+        boolean salir = false, salirf = false;
         Pila_helado ph = new Pila_helado();
         Pila_toping pt = new Pila_toping();
         Pila_Barquilla pb = new Pila_Barquilla();
         Cola_Clientes cc = new Cola_Clientes();
         
-        ph.Push_helado("Chocolate");
-        ph.Push_helado("Fresa");
-        ph.Push_helado("Mantecado");
-        ph.Push_helado("Oreo");
-        ph.Push_helado("Piña");
-        
-        ph.mostrar_helados();
-        
-        System.out.println();
-        
-        pt.Push_topping("galleta");
-        pt.Push_topping("Chispas");
-        pt.Push_topping("ro");
-        pt.Push_topping("Oreo");
-        pt.Push_topping("Flips");
-        
-        pt.mostrar_topping();
-        
-        System.out.println();
-        
-        cc.enqueue("Pedro");
-        cc.enqueue("Anabella");
-        cc.enqueue("Sahenndry");
-        cc.enqueue("Rodrigo");
-        cc.enqueue("Ray");
-        cc.enqueue("Diego");
-        
-        cc.mostrar_per();
-        
-        System.out.println();
-
-        
-        pb.Push_Barquilla(bar);
-        pb.Push_Barquilla(bar);
-        pb.Push_Barquilla(bar);
-        pb.Push_Barquilla(bar);
-        pb.Push_Barquilla(bar);
-        
-        pb.mostrar_Barquilla();
-                
-        ph.Pop_helado();
-        pt.Pop_topping();
-        cc.dequeue();
-        
-        System.out.println();
-        
-        ph.mostrar_helados();
-        System.out.println();
-        pt.mostrar_topping();
-        System.out.println();
-        cc.mostrar_per();
-        System.out.println();
-        
-        
-        
-
+        while(!salir){
+            
+            System.out.println("1. Iniciar compra");
+            System.out.println("2. Salir del sistema");
+            System.out.println("Elija la opcion a realizar");
+            op = leer.nextInt();
+            
+            switch(op){
+                case 1: 
+                    while(!salirf){
+                        System.out.println("\t Bienvenido");
+                        System.out.println("\n 1. Agregar helado");
+                        System.out.println("\n 2. Agregar toppings");
+                        System.out.println("\n 3. Volver a Inicio");
+                        op = leer.nextInt();
+                        if(op == 1){
+                            //Apartado donde el usuario seleccionara el sabor de helado de su eleccion y se añadira a la factura
+                            System.out.println("\t Elija el sabor de helado (Maximo 3)");
+                            System.out.println("\n 1. Chocolate ");
+                            System.out.println("\n 2. Mantecado");
+                            System.out.println("\n 3. Fresa");
+                            System.out.println("\n 4. Mora");
+                            System.out.println("\n 5. Kiwi");
+                            System.out.println("\n 6. Parchita");
+                            System.out.println();
+                        }else if(op == 2){
+                            //Apartado donde el usuario seleccionara el sabor de Topping de su eleccion y se añadira a la factura
+                            System.out.println("\t Elija el sabor de Toppings (Maximo 3)");
+                            System.out.println("\n 1. Sirope de Chocolate");
+                            System.out.println("\n 2. Sirope de fresa");
+                            System.out.println("\n 3. Sirope de caramelo");
+                            System.out.println("\n 4. Arequipe");
+                            System.out.println("\n 5. Nutella");
+                            System.out.println("\n 6. Cerales");
+                            System.out.println("\n 7. Galletas");
+                            System.out.println();
+                        }else if(op ==3){
+                            //Apartado para imprimir la factura compra del cliente, donde se mostrara "sabor(es) de helado y topping que selecciono el cliente" y "Monto de cada uno de los elemento hasta llegar a un Monto total"
+                        }else if(op ==4){
+                            //Guarda la factura en la pila o lista y regresa al menu de inicio para atender a otro cliente
+                            salirf = true;
+                            System.out.println();
+                        }
+                    }
+                    break;
+                case 2:
+                    //Se sale y ya jaja
+                    System.out.println("Ha salido del sistema");
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("ERROR");
+            }
+        }
     }
 }
