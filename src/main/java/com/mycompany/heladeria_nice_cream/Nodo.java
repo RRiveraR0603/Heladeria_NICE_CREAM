@@ -8,69 +8,73 @@ package com.mycompany.heladeria_nice_cream;
  *
  * @author RICHARD RIVERA
  */
-public class Nodo {
-    private int Valor;
-    private String toping;
-    private String helado;
-    private String personas;
-    private Barquilla bar;
-    private Nodo sig;
+
+public class Nodo<T> {
+    private T valor;
+    private Nodo<T> sig;
+
+    /**
+     * Constructor por defecto del nodo
+     */
+    public Nodo() {
+        this.valor = null;
+        this.sig = null;
+    }
+
+    /**
+     * Constructor con parametros del nodo
+     * 
+     *  v El valor del nodo
+     *  siguiente El nodo siguiente
+     */
+    public Nodo(T v, Nodo<T> siguiente){
+        this.valor = v;
+        this.sig = siguiente;
+    }
     
-    public void Nodo(){
-        this.Valor = 0;
-        this.toping = "";
-        this.helado = "";
-        this.personas = "";
-        this.bar = null;
+    /**
+     * Constructor con parametros del nodo
+     *
+     *  v Es el objeto del nodo
+     */
+    public Nodo(T v) {
+        this.valor = v;
         this.sig = null;
     }
     
-    public int getvalor(){
-        return Valor;
-    } 
-    
-    public void setValor(int Valor){
-        this.Valor = Valor;
+    /**
+     * Metodo que obtiene el siguiente nodo
+     *
+     * Retorna El siguiente nodo
+     */
+    public Nodo<T> getSig() {
+       return this.sig;
     }
     
-    public Nodo getSiguiente(){
-        return sig;
-    }
-    
-    public void setSiguiente(Nodo sig){
+    /**
+     * Metodo que modifica el siguiente nodo
+     *
+     *  sig El nodo por el cual se cambiara el actual
+     */
+    public void setSig(Nodo<T> sig) {
         this.sig = sig;
     }
     
-    public String getToping(){
-        return toping;
+    /**
+     * Metodo que obtiene el valor del nodo
+     *
+     * retorna el valor
+     */
+    public T getValor() {
+       return this.valor;
     }
     
-    public void setToping(String toping){
-        this.toping = toping;
-    }
-    
-    public String getHelado(){
-        return helado;
-    }
-    
-    public void setHelado(String helado){
-        this.helado = helado;
-    }
-    
-    public String getPersonas(){
-        return personas;
-    }
-    
-    public void setPersonas(String personas){
-        this.personas = personas;
-    }
-    
-    public Barquilla getBarquilla(){
-        return bar;
-    }
-    
-    public void setBarquilla(Barquilla bar){
-        this.bar = bar;
-        
+    /**
+     * Metodo que modifica el siguiente nodo
+     *
+     * v El valor por el cual se cambiara el actual
+     */
+    public void setValor(T v) {
+        this.valor = v;
     }
 }

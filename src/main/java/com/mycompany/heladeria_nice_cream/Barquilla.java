@@ -9,19 +9,49 @@ package com.mycompany.heladeria_nice_cream;
  * @author RICHARD RIVERA
  */
 public class Barquilla {
-    private String sabor_hela;
-    private String sabor_top;
-    private int cant_max_he;
-    
-    public Barquilla(String hel, String top, int hemax){
-        sabor_hela = hel;
-        sabor_top = top;
-        cant_max_he = 3;
+    private Pila<Helado> saboresHelado;
+    private Pila<Topping> saboresTopping;
+    int costo;
+
+    public Barquilla() {
+        this.saboresHelado = new Pila();
+        this.saboresTopping = new Pila();
+        costo = 0;
     }
+  
+    public int getCosto() {
+        return this.costo;
+    }
+  
+    public void agregarHelado(Helado sHelado) {
+        this.saboresHelado.push(sHelado);
+        costo++;
+    }
+
+    public void agregarTopping(Topping sTopping) {
+        this.saboresTopping.push(sTopping);
+        costo++;
+    }
+
     @Override
-    public String toString(){
-        return "La cantidad maxima de bolas de helado y toppings para una barquilla es: "+cant_max_he+", "+
-                "Sabor de helado: "+ sabor_hela+", "+
-                "Sabor de top: "+sabor_top;
+    public String toString() {
+        String string = "";
+        int cant = 0;
+        cant = saboresHelado.getSize();
+        string += "\t" + cant + "x Bola de Helado:\n";
+        
+        for (int i = 1; i <= cant; i++) {
+            string += "\t   " + i + ". " + saboresHelado.pop().getSabor() + ": 1$" + "\n";
+        }
+
+        cant = saboresTopping.getSize();
+        string += "\t" + cant + "x Topping:\n";
+        for (int i = 1; i <= cant; i++) {
+	    string += "\t   " + i + ". " + saboresTopping.pop().getTopping() + ": 1$" + "\n";
+        }
+
+        string += "\n\tTOTAL\t\t\t   " + costo + "$" + "\n";
+        return string;
     }
 }
+

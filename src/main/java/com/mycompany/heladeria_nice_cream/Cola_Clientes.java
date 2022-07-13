@@ -8,70 +8,83 @@ package com.mycompany.heladeria_nice_cream;
  *
  * @author RICHARD RIVERA
  */
-public class Cola_Clientes {
-    private Nodo inicio;
-    private Nodo Final;
-    
-    //Metodo Constructor
-    public void Pila(){
-        inicio = null;
-        Final = null;
+public class Cola_Clientes<T> {
+    private Nodo<T> top, tail;
+    private int size;
+
+    /**
+     * Constructor por defecto de la cola
+     */
+    public Cola_Clientes() {
+        top = tail = null;
+        size = 0;
     }
     
-    //Funcion que verifica si la pila esta vacia
-    public boolean IsEmpety_per(){
-        return inicio == null;
+    /**
+     * Metodo que retorna la longitud de la cola
+     * 
+     * @return La longitud de la cola 
+     */
+    public int getSize() {
+        return size;
     }
     
-    //Metdodo de insertar dato a la cola(enqueue)
-    public void enqueue(String persona){
-        Nodo nuevo = new Nodo();
-        nuevo.setPersonas(persona);
-        if(IsEmpety_per()){
-            //"inicio" y "Final" toman referencia de la primera variable.
-            inicio = nuevo;
-            Final = nuevo;
-        }else{
-            Final.setSiguiente(nuevo);
-            Final = nuevo;
+    /**
+     * Metodo que verifica si la cola esta vacia
+     * 
+     * @return true si la cola esta vacia, false si la cola no esta vacia 
+     */
+    public Boolean isEmpty() {
+        return (top == null);
+    }
+    
+     /**
+     * Metodo que retorna el frente de la cola
+     * 
+     * @return null si la cola esta vacia, sino el valor contenido en el frente
+     */
+    public T front() {
+        if (isEmpty()) {
+            return null;
+        } else {
+            return top.getValor();
         }
     }
     
-    //Funcion de eliminar un dato de la cola (dequeue)
-    public String dequeue(){
-        if(!IsEmpety_per()){
-            String dato = inicio.getPersonas();
-            if(inicio == Final){
-                inicio = null;
-                Final = null;
-            }else{
-                inicio = inicio.getSiguiente();
+    /**
+     * Metodo que inserta al final de la cola
+     * 
+     * @param v El nuevo nodo de la cola 
+     */
+    public void enqueue(T v) {
+        Nodo<T> nuevo = new Nodo(v, null);
+        if (isEmpty()) {
+            top = nuevo;
+        } else {
+            tail.setSig(nuevo);
+        }
+        tail = nuevo;
+        size++;
+    }
+    
+     /**
+     * Metodo que remueve al principio de la cola
+     * 
+     * @return El valor contenido en el frente de la cola
+     */
+    public T dequeue() {
+        T aux;
+        if (isEmpty()) {
+            aux = null;
+        } else {
+            aux = top.getValor();
+            top = top.getSig();
+            size--;
+            if (isEmpty()){
+                tail = null;
             }
-            return dato;
-        }else{
-            return "Cola Vacia";
         }
+        return aux;
     }
-    
-    //Metodo que muestra todos los elementos de la pila.
-    public void mostrar_per(){
-        Nodo aux = inicio;
-        
-        //recorre la pila hasta el ultimo nodo
-        while(aux != null){
-            System.out.print("|\t"+ aux.getPersonas()+ "\t|");
-            aux = aux.getSiguiente();
-        }
-    }  
-    
-    //Muestra la cantidad de personas que hay en la cola
-    public int cantidad_per(){
-        int cant = 0;
-        Nodo aux = inicio;
-        while(aux != null){
-            cant++;
-            aux = aux.getSiguiente();
-        }
-        return cant;
-    }
+
 }

@@ -19,9 +19,6 @@ public class Heladeria_Nice_Cream {
         String h = "", t = "";
         int op = 0;
         boolean salir = false, salirf = false;
-        Pila_helado ph = new Pila_helado();
-        Pila_toping pt = new Pila_toping();
-        Pila_Barquilla pb = new Pila_Barquilla();
         Cola_Clientes cc = new Cola_Clientes();
         
         while(!salir){
