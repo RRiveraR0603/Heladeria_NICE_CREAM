@@ -9,6 +9,8 @@ import java.util.Scanner;
 /**
  *
  * @author RICHARD RIVERA
+ * @author Sahhendry Carreño
+ * @author Edgar Ruiz
  */
 public class Heladeria_Nice_Cream {
 
