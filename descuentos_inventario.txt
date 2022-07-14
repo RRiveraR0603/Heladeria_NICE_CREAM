@@ -1,0 +1,47 @@
+		Inventario de helados
+
+	1. Mantecado
+		    Cantidad de ventas: 7
+
+	2. Chocolate
+		    Cantidad de ventas: 1
+
+	3. Fresa
+		    Cantidad de ventas: 1
+
+	4. Mora
+		    Cantidad de ventas: 0
+
+	5. Kiwi
+		    Cantidad de ventas: 0
+
+	6. Parchita
+		    Cantidad de ventas: 0
+
+	******************************
+
+		Inventario de toppings
+
+	1. Sirope de caramelo
+		    Cantidad de ventas: 2
+
+	2. Sirope de Chocolate
+		    Cantidad de ventas: 2
+
+	3. Sirope de fresa
+		    Cantidad de ventas: 0
+
+	4. Arequipe
+		    Cantidad de ventas: 0
+
+	5. Nutella
+		    Cantidad de ventas: 0
+
+	6. Cereales
+		    Cantidad de ventas: 0
+
+	7. Galletas
+		    Cantidad de ventas: 0
+
+	******************************
+

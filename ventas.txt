@@ -1,1 +1,134 @@
 
+	******************************
+			  Factura
+
+	Pedido nº: 1
+	Cliente: 
+	Nombre: Jose
+	Apellido: Lopez
+	Telefono: 0412-3410987
+
+	1x Bola de Helado:
+	   1. Mantecado: 1$
+	1x Topping:
+	   1. Sirope de caramelo: 1$
+
+	TOTAL			   2$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 2
+	Cliente: 
+	Nombre: Carmen
+	Apellido: Teran
+	Telefono: 0416-9876543
+
+	1x Bola de Helado:
+	   1. Mantecado: 1$
+	1x Topping:
+	   1. Sirope de Chocolate: 1$
+
+	TOTAL			   2$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 3
+	Cliente: 
+	Nombre: Carlos
+	Apellido: Heranadez
+	Telefono: 0412-5986741
+
+	1x Bola de Helado:
+	   1. Mantecado: 1$
+	1x Topping:
+	   1. Sirope de Chocolate: 1$
+
+	TOTAL			   2$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 4
+	Cliente: 
+	Nombre: Ana
+	Apellido: Garcia
+	Telefono: 0416-9856432
+
+	2x Bola de Helado:
+	   1. Chocolate: 1$
+	   2. Mantecado: 1$
+	0x Topping:
+
+	TOTAL			   2$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 5
+	Cliente: 
+	Nombre: Juan
+	Apellido: Malaver
+	Telefono: 0412-3521245
+
+	1x Bola de Helado:
+	   1. Mantecado: 1$
+	1x Topping:
+	   1. Sirope de caramelo: 1$
+
+	TOTAL			   2$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 6
+	Cliente: 
+	Nombre: Guillermo
+	Apellido: Moreno
+	Telefono: 0416-5987456
+
+	1x Bola de Helado:
+	   1. Mantecado: 1$
+	0x Topping:
+
+	TOTAL			   1$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 7
+	Cliente: 
+	Nombre: Hilda
+	Apellido: Reyes
+	Telefono: 0412-6934512
+
+	1x Bola de Helado:
+	   1. Fresa: 1$
+	0x Topping:
+
+	TOTAL			   1$
+	******************************
+
+	******************************
+			  Factura
+
+	Pedido nº: 8
+	Cliente: 
+	Nombre: Doris
+	Apellido: Velasquez
+	Telefono: 0412-9856421
+
+	1x Bola de Helado:
+	   1. Mantecado: 1$
+	0x Topping:
+
+	TOTAL			   1$
+	******************************
+

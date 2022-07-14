@@ -81,7 +81,39 @@ public static void guardarFactura(int nPedido, String factura, Cliente cliente) 
             if(file != null) { 
                 file.close();
             } 
-        } catch (IOException ioe) { }    
+        } catch (IOException ioe) { 
+        
+        }    
+    }
+
+public static void guardarInventario(String inventario, String producto) {
+        FileWriter file = null;
+        BufferedWriter bw = null;
+        try {
+            file = new FileWriter("descuentos_inventario.txt", true);
+            bw = new BufferedWriter(file);
+            bw.write("\t\tInventario de " + producto);
+            bw.newLine();
+            bw.newLine();
+            bw.write(inventario);
+            bw.write("\t******************************");
+            bw.newLine();
+            bw.newLine();
+            bw.flush();
+        } catch (FileNotFoundException fnfe) {
+            Mostrar.error("El archivo \"ventas.txt\" no encontrado.");
+        } catch (IOException ioe) {
+            Mostrar.error("El archivo \"ventas.txt\" no se puede leer.");
+        } finally {
+            try {
+                if(bw != null) { 
+                    bw.close();
+                }
+                if(file != null) { 
+                    file.close();
+                } 
+            } catch (IOException ioe) { }
+        }
     }
 }
 
