@@ -127,7 +127,7 @@ public class Heladeria_Nice_Cream {
                     }
                     break;
                 case 3: 
-                    //Salida
+                    //Salida 
                     Mostrar.salida(); 
                     salir = true;
                     break;
@@ -136,6 +136,6 @@ public class Heladeria_Nice_Cream {
                         Mostrar.error("La opcion no es valida.");
                     }
             }
-        }while(!salir);
+        }while(!salir); //Culminar.
     }
 }
