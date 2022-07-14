@@ -85,6 +85,10 @@ public class Mostrar {
         System.out.println("\t**** COMPRA TERMINADA ****");
     }
     
+    public static void inventario(String inventario, String msj) {
+        System.out.println("\n\t\tInventario de " + msj + "\n");
+        System.out.println(inventario);
+    }
     
     public static void salida() {
         System.out.print("\n\tHa salido del sistema");
