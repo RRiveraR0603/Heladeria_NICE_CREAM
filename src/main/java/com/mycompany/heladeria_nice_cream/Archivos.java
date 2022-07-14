@@ -42,34 +42,44 @@ public class Archivos {
         return clientes;
     }
     
-    public static void guardarFactura(int nPedido, String factura, Cliente cliente) {
+public static void guardarFactura(int nPedido, String factura, Cliente cliente) {
         FileWriter file = null;
         BufferedWriter bw = null;
         try {
             file = new FileWriter("ventas.txt", true);
             bw = new BufferedWriter(file);
-            bw.write("\t****************************************");
-            bw.write("\t\t\tFactura\n");
+            bw.write("\t******************************");
+            bw.newLine();
+            bw.write("\t\t\t  Factura");
+            bw.newLine();
+            bw.newLine();
             bw.write("\tPedido nº: " + nPedido);
+            bw.newLine();
+            bw.write("\tCliente: ");
+            bw.newLine();
             bw.write("\tNombre: " + cliente.getNombre());
+            bw.newLine();
             bw.write("\tApellido: " + cliente.getApellido());
+            bw.newLine();
             bw.write("\tTelefono: " + cliente.getTelefono());
             bw.newLine();
+            bw.newLine();
             bw.write(factura);
-            bw.write("\t****************************************");
+            bw.write("\t******************************");
+            bw.newLine();
             bw.newLine();
             bw.flush();
         } catch (FileNotFoundException fnfe) {
             Mostrar.error("El archivo \"ventas.txt\" no encontrado.");
-        } catch (IOException ioe) { // No se pudo leer el archivo
+        } catch (IOException ioe) {
             Mostrar.error("El archivo \"ventas.txt\" no se puede leer.");
         } finally {
             try {
                 if(bw != null) { 
-                    bw.close(); // Cerrar el buffered
+                    bw.close();
                 }
                 if(file != null) { 
-                    file.close(); // Cerrar el archivo
+                    file.close();
                 } 
             } catch (IOException ioe) { }
         }

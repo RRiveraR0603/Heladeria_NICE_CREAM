@@ -20,14 +20,10 @@ public class Heladeria_Nice_Cream {
         final String[] HELADOS = {"Chocolate", "Mantecado", "Fresa", "Mora", "Kiwi", "Parchita"};
         final String[] TOPPINGS = {"Sirope de Chocolate", "Sirope de fresa", "Sirope de caramelo", "Arequipe", "Nutella", "Cereales", "Galletas"};
         final int MAXHELADOS = 3;
-        final int MAXTOPPINGS = 2;
-        Cola_Clientes<Cliente> colaClientes = new Cola_Clientes();
+        final int MAXTOPPINGS = 2;  
         
-        //Esto es para probar el menu, se tiene que insertar los datos del archivo txt
-        Cliente cliente1 = new Cliente("Sahhendry", "Carreño", "0416-0000000");
-        Cliente cliente2 = new Cliente("Richard", "Riveras", "0412-0000000");
-        colaClientes.enqueue(cliente1);
-        colaClientes.enqueue(cliente2);
+        Cola_Clientes<Cliente> colaClientes = new Cola_Clientes();       
+        
         
         Barquilla actualBarquilla;
         boolean salir = false;
@@ -36,7 +32,7 @@ public class Heladeria_Nice_Cream {
         
         while(!salir){
             Mostrar.menuPrincipal();
-            op = Leer.opcion(2, "Elija la opcion a realizar: ");
+            op = Leer.opcion(3, "Elija la opcion a realizar: ");
             switch (op) {
                 case 1:
                     while (!colaClientes.isEmpty()) {
@@ -113,7 +109,7 @@ public class Heladeria_Nice_Cream {
                     if (colaClientes.isEmpty()) {
                         // genero inventario
                     } else {
-                        Mostrar.hayCola();
+                        Mostrar.conCola();
                     }
                     break;
                 case 3: 

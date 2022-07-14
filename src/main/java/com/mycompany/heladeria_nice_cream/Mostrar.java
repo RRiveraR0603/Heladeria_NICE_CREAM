@@ -8,12 +8,12 @@ package com.mycompany.heladeria_nice_cream;
  *
  * @author RICHARD RIVERA
  */
-class Mostrar {
+public class Mostrar {
     
     public static void menuPrincipal() {
         System.out.println("\n\tSistema de Compra de Barquillas\n");
         System.out.println("\t1. Iniciar compra");
-        System.out.println("\t2. Hacer inventario");
+        System.out.println("\t2. Imprimir Inventario");
         System.out.println("\t3. Salir del sistema");
     }
     
@@ -64,25 +64,27 @@ class Mostrar {
     
     public static void sinCola() {
         System.out.println("\n\tNo hay clientes en cola");
-        System.out.println("\tPor favor, presione \"2\" para salir del sistema");
+        System.out.println("\tPor favor, presione \"3\" para salir del sistema");
     }
     
-    public static void hayCola() {
+    public static void conCola() {
         System.out.println("\n\tHay clientes en cola");
-        System.out.println("\tPor favor, atiendalos antes de emitir el inventario");
+        System.out.println("\tPor favor, atiende a los clientes antes de hacer inventario");
     }
     
     public static void factura(int nPedido, String factura, Cliente cliente) {
-        System.out.println("\n\t****************************************");
-        System.out.println("\t\t\tFactura\n");
+        System.out.println("\n\t******************************");
+        System.out.println("\t\t  Factura\n");
         System.out.println("\tPedido nº: " + nPedido);
         System.out.println("\tCliente: ");
         System.out.println("\tNombre: " + cliente.getNombre());
         System.out.println("\tApellido: " + cliente.getApellido());
         System.out.println("\tTelefono: " + cliente.getTelefono());
-        System.out.println("\n" + factura);
-        System.out.println("\t****************************************");
+        System.out.print("\n" + factura);
+        System.out.println("\t******************************");
+        System.out.println("\t**** COMPRA TERMINADA ****");
     }
+    
     
     public static void salida() {
         System.out.print("\n\tHa salido del sistema");

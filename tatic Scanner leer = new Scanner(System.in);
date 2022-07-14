@@ -1,0 +1,23 @@
+[33mcommit a2d638301f6bf6f7015ef22abe0e75f9f48a292b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Richard Rivera <richirrr1234@gmail.com>
+Date:   Wed Jul 13 05:21:37 2022 -0400
+
+    Nuevas clases Mostrar,Achivos y leer; ademas de actualizar la calse main, falta realizar el inventario e insertar los archivos planos
+
+[33mcommit 9a8cff0f9e4d68b055f3434fb83480d91a22e79b[m
+Author: Richard Rivera <richirrr1234@gmail.com>
+Date:   Tue Jul 12 23:24:23 2022 -0400
+
+    Actualice y optimice algunas clases, entre ellas la clase de pila y cola
+
+[33mcommit c7eef82fd577a4cd3d70fced13660ca165cfaa3a[m
+Author: Richard Rivera <richirrr1234@gmail.com>
+Date:   Sun Jul 10 21:07:48 2022 -0400
+
+    El cuerpo del menu donde se van a involucrar los metodos necesarios para cada caso
+
+[33mcommit 124b396fdf0c94a28a847754945a59e95cc96505[m
+Author: Richard Rivera <richirrr1234@gmail.com>
+Date:   Sat Jul 9 18:11:05 2022 -0400
+
+    Metodos y funciones de las pilas y colas listas, falta hacerle unos arrglos
